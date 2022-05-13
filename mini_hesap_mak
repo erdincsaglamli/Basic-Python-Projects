@@ -1,0 +1,40 @@
+
+def topla(a,b):
+  top=(int(a)+int(b))
+  return top
+def cikar(a,b):
+  cik=(int(a)-int(b))
+  return cik
+def carp(a,b):
+  car=(int(a)*int(b))
+  return car
+def bolmek(a,b):
+  bol=(int(a)/int(b))
+  return bol
+
+
+while True: 
+  islem = input("Lütfen Hangi Yapmak istedeiğiniz işlemi Yazınız :")
+  if (islem == "toplama") or (islem =="cikarma") or islem ==("carpma") or islem ==("bolme"):
+    
+    while True: 
+      a=input("Lütfen birbiriyle isleme sokacagınız birinci sayıyı giriniz : ")
+      b=input("Lütfen birbiriyle isleme sokacagınız ikinci sayıyı giriniz : ")
+      if a.isdigit() and b.isdigit() == True:
+        if islem == "toplama":
+          print(topla(a,b))
+          break
+        elif islem=="cikarma":
+          print(cikar(a,b))
+          break
+        elif islem=="carpma":
+          print(carp(a,b))
+          break    
+        elif islem=="bolme":
+          print(bolmek(a,b))
+          break          
+      else:
+        print('Hatalı giriş yaptınız, Lütfen Sayı Olarak Giriniz : ')
+       
+  else:
+    print("Tanımlı olmayan bir işlem seçtiniz, lütfen 'toplama, çıkarma, bölme, çarpma' işlemlerinden birini giriniz: ")
